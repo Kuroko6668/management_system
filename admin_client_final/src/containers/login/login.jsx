@@ -69,6 +69,8 @@ class Login extends Component{
         </header>
         <section>
           <h1>sign in</h1>
+          <h4>default user name:admin</h4>
+          <h4>default password:admin</h4>
           <Form onSubmit={this.handleSubmit} className="login-form">
             <Item>
             {getFieldDecorator('username', {
