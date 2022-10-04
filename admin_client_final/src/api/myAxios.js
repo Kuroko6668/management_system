@@ -17,7 +17,7 @@ instance.interceptors.request.use((config)=> {
   //从redux中获取之前所保存的token
   const {token} = store.getState().userInfo
   //向请求头中添加token，用于校验身份
-  if(token) config.headers.Authorization = 'wang_' + token
+  if(token) config.headers.Authorization = 'atguigu_' + token
   //从配置对象中获取method和data
   const {method,data} = config 
   //若是post请求
