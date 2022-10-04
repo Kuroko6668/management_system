@@ -69,8 +69,6 @@ class Login extends Component{
         </header>
         <section>
           <h1>sign in</h1>
-          <h4>default user name:admin</h4>
-          <h4>default password:admin</h4>
           <Form onSubmit={this.handleSubmit} className="login-form">
             <Item>
             {getFieldDecorator('username', {
@@ -83,7 +81,7 @@ class Login extends Component{
               })(
                 <Input 
                     prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)'}}/>}
-                    placeholder="user name"
+                    placeholder="default user name: admin"
                 />,
               )}
             </Item>
@@ -96,7 +94,7 @@ class Login extends Component{
                 <Input
                   prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
                   type="password"
-                  placeholder="password"
+                  placeholder="default password:admin"
                 />
               )}
             </Item>
