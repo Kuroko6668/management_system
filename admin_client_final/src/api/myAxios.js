@@ -17,7 +17,7 @@ instance.interceptors.request.use((config)=> {
   //从redux中获取之前所保存的token
   const {token} = store.getState().userInfo
   //向请求头中添加token，用于校验身份
-  if(token) config.headers.Authorization = 'atguigu_' + token
+  if(token) config.headers.Authorization = 'wang_' + token
   //从配置对象中获取method和data
   const {method,data} = config 
   //若是post请求
@@ -42,7 +42,7 @@ instance.interceptors.response.use(
     //进度条结束
     NProgress.done()
     if(error.response.status === 401){
-      message.error('身份校验失败，请重新登录',1)
+      message.error('Identity verification failed, please login again',1)
       //分发一个删除用户信息的action
       store.dispatch(createDeleteUserInfoAction())
     }else{
