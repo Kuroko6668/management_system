@@ -74,29 +74,29 @@ class Detail extends Component {
             <Button type="link" size="small" onClick={()=>{this.props.history.goBack()}}>
               <Icon type="arrow-left" style={{fontSize:'20px'}}/>
             </Button>
-            <span>product detail</span>
+            <span>detail</span>
           </div>
         }
       >
         <List loading={this.state.isLoading}>
           <Item>
-            <span className="prod-title">product name：</span>
+            <span className="prod-title">name：</span>
             <span>{this.state.name}</span>
           </Item>
           <Item>
-            <span className="prod-title">product description：</span>
+            <span className="prod-title">description：</span>
             <span>{this.state.desc}</span>
           </Item>
           <Item>
-            <span className="prod-title">product price：</span>
+            <span className="prod-title">price：</span>
             <span>{this.state.price}</span>
           </Item>
           <Item>
-            <span className="prod-title">product category name：</span>
+            <span className="prod-title">category name：</span>
             <span>{this.state.categoryName}</span>
           </Item>
           <Item>
-            <span className="prod-title">product picture：</span>
+            <span className="prod-title">picture：</span>
             {
               this.state.imgs.map((item,index)=>{
                 return <img key={index} src={`${BASE_URL}/upload/`+item} alt="product picture" style={{width:'200px'}}/>

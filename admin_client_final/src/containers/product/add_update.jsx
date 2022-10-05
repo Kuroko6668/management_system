@@ -109,7 +109,7 @@ class AddUpdate extends Component {
             labelCol={{md:2}}
             wrapperCol={{md:7}}
           >
-            <Item label="product name">
+            <Item label="name">
               {
                 getFieldDecorator('name', {
                   initialValue:this.state.name || '',
@@ -121,7 +121,7 @@ class AddUpdate extends Component {
                 )
               }
             </Item>
-            <Item label="product description">
+            <Item label="description">
               {getFieldDecorator('desc', {
                 initialValue:this.state.desc || '',
                 rules: [
@@ -133,7 +133,7 @@ class AddUpdate extends Component {
                 />
               )}
             </Item>
-            <Item label="product price">
+            <Item label="price">
               {getFieldDecorator('price', {
                 initialValue:this.state.price || '',
                 rules: [
@@ -148,7 +148,7 @@ class AddUpdate extends Component {
                 />
               )}
             </Item>
-            <Item label="product category">
+            <Item label="category">
               {getFieldDecorator('categoryId', {
                 initialValue:this.state.categoryId || '',
                 rules: [
