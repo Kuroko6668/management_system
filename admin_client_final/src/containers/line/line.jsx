@@ -14,22 +14,22 @@ export default class Line extends Component {
     const {sales, inventorys} = this.state
     return { // 配置对象
       title: {
-          text: 'ECharts 入门示例'
+          text: 'ECharts'
       },
       tooltip: {},
       legend: {
-          data:['销量', '库存']
+          data:['Outbound', 'inbound']
       },
       xAxis: {
-          data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+          data: ["Test tubes","Beakers","Magnifying glass","Volumetric flask","Bunsen burner","Dropper"]
       },
       yAxis: {},
       series: [{
-          name: '销量',
+          name: 'Outbound',
           type: 'line',
           data: sales
       },{
-          name: '库存',
+          name: 'inbound',
           type: 'line',
           data: inventorys
       }]
@@ -39,7 +39,7 @@ export default class Line extends Component {
   render() {
     return (
       <div>
-        <Card title='柱状图一'>
+        <Card title='line一'>
           <ReactEcharts option={this.getOption()} style={{height: 300}}/>
         </Card>
 
